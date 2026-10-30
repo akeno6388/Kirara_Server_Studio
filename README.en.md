@@ -1,11 +1,11 @@
-# Kirara_Server_APP
+# Kirara_Server_Studio
 
 > A WinUI 3-based Windows desktop client for unified access to and management of the various application services on Kirara_Server.
 > Through the three-step model **Create Instance → Select Scheme → Link Token**, it delivers configure-once, multi-service direct access, and automatic authenticated login.
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.6.9-blue) ![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey) ![Framework](https://img.shields.io/badge/.NET-10-purple) ![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
+![Version](https://img.shields.io/badge/version-1.7.0-blue) ![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey) ![Framework](https://img.shields.io/badge/.NET-10-purple) ![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
 
 </div>
 
@@ -35,6 +35,7 @@
 - 🌈 **Appearance theme system**: follow system / manual light-dark / 48-color Win11-style accent colors, with three-level linkage taking effect instantly; comment avatars automatically refresh to match the light/dark theme
 - 🚀 **Quick Start templates**: built-in common service-group templates for one-click application; cover images and templates are managed by the server
 - 🛠️ **WebView2 stability hardening**: self-healing from process crashes and automatic rebuild via a white-screen watchdog (limited retries + cooldown), plus double protection against file-dialog reentrancy crashes
+- ⬇️ **Web downloads always land in the Download Manager**: downloads touched in Scheme pages, in-app standalone browser windows (**including every window they pop in turn**) and the Admin Panel no longer raise the browser's own download dialog — they are registered in the Download Manager with a unified Downloads folder (collision-safe naming), live progress and speed, pause / resume / stop, persisted tasks and red/green file-presence markers; the transfer still runs inside Chromium, so session cookies, `blob:` URLs and POST-triggered downloads keep working. **Blank download-only popups hide themselves once the download is taken over and close automatically when it finishes** — no need to close them by hand (closing one manually would abort the download)
 - 🖱️ **External file drag & drop**: files can be dragged straight from File Explorer / the desktop into Scheme pages, in-app standalone browser windows, and the Admin Panel (fixing the WinUI 3 issue where external drops are blocked — with a "no entry" cursor — because WebView2 is hosted windowlessly); once accepted, Windows natively forwards the drop to the page, which receives **real file entries**, so in-page drop highlights and upload controls work as usual
 - ⏻ **Dual-channel auto-start registration**: enabling "Start with Windows" now writes both a registry Run entry and an "at logon" scheduled task, the two backing each other up — if one is removed by a cleanup tool or disabled in Task Manager, the other still launches the app; the in-app setting is the single source of truth, and enabling it repairs a startup entry marked "disabled" by Windows or an optimizer; duplicate launches from the auto-start chain are silent no-ops that never drag a minimized or tray-hidden window back on screen
 - 🧹 **"Clear Data" truly returns to a fresh install**: besides account data and caches, it also clears the update installer directory, the remembered accounts and pre-filled credentials on the login page, and the auto-start entries registered by this build; afterwards the login account list is empty and no "disabled in settings but still starting" state remains; when another build (development/release) coexists, only this build's auto-start registration is removed, never the other's
@@ -176,4 +177,4 @@ This software is **closed-source proprietary software. All Rights Reserved.**
 
 ---
 
-<div align="center">Made with ♥ by SenVenth AC</div>
+<div align="center">Made with ♥ by SenVenth</div>
