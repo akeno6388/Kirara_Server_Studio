@@ -5,7 +5,7 @@
 
 <div align="center">
 
-![Version](https://img.shields.io/badge/version-1.7.0-blue) ![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey) ![Framework](https://img.shields.io/badge/.NET-10-purple) ![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
+![Version](https://img.shields.io/badge/version-1.7.1-blue) ![Platform](https://img.shields.io/badge/platform-Windows%2010%2B-lightgrey) ![Framework](https://img.shields.io/badge/.NET-10-purple) ![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red)
 
 </div>
 
@@ -13,7 +13,7 @@
 
 ## ✨ Features
 
-- 📜 **Software license agreement gate**: the Kirara Server Software License Agreement must be read and accepted before user/service instances can be created; the acceptance state is recorded locally per signed-in account. Unattended instance auto-start is gated the same way — with no acceptance **not a single instance starts**: the app first brings its window back on screen and shows the agreement dialog, and continues the start-up sequence **in place** once accepted (no re-login). You can revoke it at any time under "Settings → Agreement Management" (revoking closes the app immediately)
+- 📜 **Software license agreement gate**: the Kirara Server Studio Software License Agreement must be read and accepted before user/service instances can be created; the acceptance state is recorded locally per signed-in account. Unattended instance auto-start is gated the same way — with no acceptance **not a single instance starts**: the app first brings its window back on screen and shows the agreement dialog, and continues the start-up sequence **in place** once accepted (no re-login). You can revoke it at any time under "Settings → Agreement Management" (revoking closes the app immediately)
 - 🗂️ **Instance-based management**: distinguishes User Instances from Service Instances; supports renaming, favorites, color tags, import/export, and flexible switching between multiple instances; each instance row in the left bar has a one-click "Close Instance" button (auto-greyed while busy / not started, sharing the same state source as the "My Apps" card on the home page)
 - ☁️ **Cloud sync (instances and tokens only)**: the cloud buttons in the left function bar and the Token Manager offer "Sync to cloud / Restore from cloud"; the sync scope is strictly limited to **instances + tokens** — software preferences (theme / app behavior / left bar) and Notification Center service items **never** take part, and restoring an older full backup package will **not** overwrite local settings or notification read states; restore counts are split by category (restored / already present and skipped), and cloud data can be deleted in one click under "Settings → Data Management → Clear Cloud Data"
 - 🧩 **Plugin-based Scheme system**: 20+ built-in Schemes covering media, live streaming, cloud drives, email, team collaboration, virtualization, remote desktop, OpenVPN, certificate issuance, game servers, and more; also supports importing third-party executables as Schemes
@@ -56,13 +56,14 @@
 
 ## ⬇️ Installation and Updates
 
-1. Go to this repository's **Releases** page and download the latest installer (`Kirara_Server_APP_Setup_x64_vX.X.X.exe`)
+1. Go to this repository's **Releases** page and download the latest installer (`Kirara_Server_Studio_Setup_x64_vX.X.X.exe`)
 2. Run the installer and follow the wizard to complete installation
 3. After the first launch, register/log in with your Kirara_Server account to start creating your first instance
 4. The program has an auto-updater that can automatically uninstall the old version and install the update
 5. WebView2 is a required component; OpenVPN / FreeRDP are optional components, unchecked by default during installation, and can be installed or upgraded at any time from the in-app **App Store**
 6. Upgrades or silent installs inherit the existing installation state on the machine and do not add or remove any installed third-party components
-7. Before creating your first user/service instance you must read and accept the Kirara Server Software License Agreement; the acceptance state is recorded locally per account and can be revoked under "Settings → Agreement Management"
+7. **Install-directory rename (from 1.7.1)**: the install directory changes from `Kirara Server APP` to `Kirara Server Studio`. When upgrading from an older version the installer **migrates it automatically** — the directory page already shows the new name, and after installation the old directory (and its registry key) is cleaned up; installed OpenVPN / FreeRDP components are preserved (OpenVPN is reinstalled into the new directory, so your VPN connections keep working). If you installed to a custom location (a directory whose name is not the default), it stays where it is
+8. Before creating your first user/service instance you must read and accept the Kirara Server Software License Agreement; the acceptance state is recorded locally per account and can be revoked under "Settings → Agreement Management"
 
 ## 🚀 Quick Start
 
