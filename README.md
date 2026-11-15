@@ -1,10 +1,6 @@
 # Kirara_Server_Studio
 
 <p align="center">
-  <img src="Assets/Kirara_Server_Studio-logo.png" width="100" alt="Kirara Server Studio">
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Version-1.7.1-blue" alt="Version">
   <img src="https://img.shields.io/badge/Platform-Windows%2010%2B-0078D4" alt="Platform">
   <img src="https://img.shields.io/badge/.NET-10-512BD4" alt=".NET">
